@@ -12,9 +12,7 @@ namespace flash_cards.Models
 
         public string Description { get; }
 
-        public List<FlashCard> GetTodaysFlashCards(IEnumerable<FlashCard> allFlashCards);
-
-        public FlashCard? GetNextFlashCard(IEnumerable<FlashCard> todaysFlashCards);
+        public FlashCard? GetNextFlashCard(IEnumerable<FlashCard> flashCards);
 
         public void ProcessFlashCard(FlashCard flashCard);
     }
