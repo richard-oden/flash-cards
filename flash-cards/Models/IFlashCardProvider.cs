@@ -8,12 +8,14 @@ namespace flash_cards.Models
 {
     public interface IFlashCardProvider
     {
-        public List<FlashCard> FlashCards { get; }
+        public string Name { get; }
 
-        public FlashCard? GetFlashCard();
+        public string Description { get; }
+
+        public List<FlashCard> GetTodaysFlashCards(IEnumerable<FlashCard> allFlashCards);
+
+        public FlashCard? GetNextFlashCard(IEnumerable<FlashCard> todaysFlashCards);
 
         public void ProcessFlashCard(FlashCard flashCard);
-
-        public void AddFlashCard(FlashCard flashCard);
     }
 }
